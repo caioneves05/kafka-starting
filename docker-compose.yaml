@@ -59,7 +59,7 @@ services:
       PORT: 9021
   
   mysql:
-    image: mysql:8.0.30-debian
+    image: mysql:8.0.30
     environment:
       - MYSQL_ROOT_PASSWORD=root
     volumes:

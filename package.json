@@ -17,14 +17,15 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./apps/nestjs-kafka/test/jest-e2e.json"
+    "test:e2e": "jest --config ./apps/nestjs-kafka/test/jest-e2e.json",
+    "generate:prisma": "yarn plop --plopfile ./generators/plopfile.mjs"
   },
   "dependencies": {
     "@nestjs/common": "^9.0.0",
     "@nestjs/core": "^9.0.0",
     "@nestjs/microservices": "^9.0.0",
     "@nestjs/platform-express": "^9.0.0",
-    "@prisma/client": "^4.15.0",
+    "@prisma/client": "^4.16.2",
     "kafkajs": "^2.2.4",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.2.0"
@@ -43,6 +44,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "jest": "29.5.0",
+    "plop": "^4.0.1",
     "prettier": "^2.3.2",
     "source-map-support": "^0.5.20",
     "supertest": "^6.1.3",

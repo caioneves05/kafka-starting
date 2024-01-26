@@ -1,0 +1,12 @@
+import { Controller, Get } from "@nestjs/common";
+import { {{pascalCase name}}Service } from "./{{name}}.service";
+
+@Controller()
+export class {{pascalCase name}}Controller {
+  constructor(private readonly {{name}}Service: {{pascalCase name}}Service) {}
+
+  @Get()
+  getHello(): string {
+    return this.{{name}}Service.getHello()
+  }
+}

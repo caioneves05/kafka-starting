@@ -1,0 +1,25 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+  output = "../../../node_modules/.prisma/client/payments"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Order{
+  id Int @id @default(autoincrement())
+  name String
+  created_at DateTime @default(now())
+  status PaymentsStatus
+}
+
+enum PaymentsStatus {
+  PENDING
+  PAYED
+  CANCELED
+}

@@ -1,0 +1,26 @@
+import { Module } from '@nestjs/common';
+import { {{pascalCase name}}Controller } from './{{name}}.controller';
+import { {{pascalCase name}}Service } from './{{name}}.service';
+import { PrismaModule } from './prisma/prisma.module';
+import { ClientsModule, Transport } from '@nestjs/microservices';
+
+@Module({
+  imports: [
+    PrismaModule,
+    ClientsModule.register([
+      {
+        name: '{{pascalCase name}}',
+        transport: Transport.KAFKA,
+        options: {
+          client: {
+            clientId: '{{name}}',
+            brokers: ['kafka:29092'],
+          },
+        },
+      },
+    ]),
+  ],
+  controllers: [{{pascalCase name}}Controller],
+  providers: [{{pascalCase name}}Service],
+})
+export class {{pascalCase name}}Module {}

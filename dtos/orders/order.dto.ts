@@ -1,4 +1,4 @@
 export class OrdersDTO {
-  client_id: number;
+  cleint_id: number;
   price: number;
 }

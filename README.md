@@ -4,10 +4,10 @@
 
 ### Rodando através do docker compose up:
 
-Acesse a pasta `kafka-strating` e abra o `VSCode`:
+Acesse a pasta `kafka-starting` e abra o `VSCode`:
 
 ```bash
-cd kafka-strating && code .
+cd kafka-starting && code .
 ```
 
 Rode os containers com o comando:

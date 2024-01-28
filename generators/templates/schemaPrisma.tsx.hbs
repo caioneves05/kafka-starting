@@ -11,7 +11,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Order{
+model {{pascalCase name}}{
   id Int @id @default(autoincrement())
   name String
   created_at DateTime @default(now())

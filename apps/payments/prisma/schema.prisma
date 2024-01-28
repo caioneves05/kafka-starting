@@ -11,15 +11,16 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Order{
+model Payment{
   id Int @id @default(autoincrement())
-  name String
+  amount Float
+  order_id Int
+  client_id Int
   created_at DateTime @default(now())
-  status PaymentsStatus
+  status PaymentStatus
 }
 
-enum PaymentsStatus {
-  PENDING
-  PAYED
-  CANCELED
+enum PaymentStatus {
+  APPROVED
+  REJECTED
 }

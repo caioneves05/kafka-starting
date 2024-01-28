@@ -7,9 +7,10 @@ import { ClientsModule, Transport } from '@nestjs/microservices';
 @Module({
   imports: [
     PrismaModule,
+    /* PUBLISHER */
     ClientsModule.register([
       {
-        name: 'Payments',
+        name: 'PAYMENTS_SERVICE',
         transport: Transport.KAFKA,
         options: {
           client: {

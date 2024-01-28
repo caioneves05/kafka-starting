@@ -1,21 +1,13 @@
-![Imersão Full Stack && Full Cycle](https://events-fullcycle.s3.amazonaws.com/events-fullcycle/static/site/img/grupo_4417.png)
-
-Participe gratuitamente: https://imersao.fullcycle.com.br/
-
-## Sobre o repositório
-
-Esse repositório contém o código-fonte ministrado na aula: Alta Performance em Tempo Real: Explorando Nest.js e Kafka [https://www.youtube.com/watch?v=z87Yo6j_iK8](https://www.youtube.com/watch?v=z87Yo6j_iK8)
-
 ## Rodar a aplicação
 
 ---
 
 ### Rodando através do docker compose up:
 
-Acesse a pasta `live-imersao-13-nestjs-kafka` e abra o `VSCode`:
+Acesse a pasta `kafka-strating` e abra o `VSCode`:
 
 ```bash
-cd live-imersao-13-nestjs-kafka && code .
+cd kafka-strating && code .
 ```
 
 Rode os containers com o comando:

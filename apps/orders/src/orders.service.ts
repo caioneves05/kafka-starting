@@ -9,7 +9,7 @@ import { lastValueFrom } from 'rxjs';
 export class OrdersService {
   constructor(
     private prismaService: PrismaService,
-    @Inject('ODERS_SERVICE')
+    @Inject('ORDERS_SERVICE')
     private kafkaCLient: ClientKafka,
   ) {}
 
@@ -29,5 +29,14 @@ export class OrdersService {
     await lastValueFrom(this.kafkaCLient.emit('orders', order));
 
     return order;
+  }
+
+  complete(order_id: number, status: OrderStatus) {
+    return this.prismaService.order.update({
+      where: {
+        id: order_id,
+      },
+      data: { status },
+    });
   }
 }
